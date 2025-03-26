@@ -24,6 +24,7 @@ public class EnvironmentGUI2 extends JFrame {
     private final Color AGENT_AVEC_ETAT_COLOR = Color.GREEN;
     private final Color AGENT_COOP1_COLOR = Color.RED;
     private final Color AGENT_COOP2_COLOR = Color.ORANGE;
+    private final Color AGENT_A_BUT_COLOR = Color.YELLOW;
     
     public EnvironmentGUI2(Environment env) {
         this.env = env;
@@ -55,6 +56,7 @@ public class EnvironmentGUI2 extends JFrame {
         addLegendItem(legendPanel, "Agent sans état", AGENT_SANS_ETAT_COLOR);
         addLegendItem(legendPanel, "Agent avec état", AGENT_AVEC_ETAT_COLOR);
         addLegendItem(legendPanel, "Agents coopératifs", AGENT_COOP1_COLOR);
+        addLegendItem(legendPanel, "Agents a but", AGENT_A_BUT_COLOR);
         
         JPanel southPanel = new JPanel(new BorderLayout());
         southPanel.add(controlPanel, BorderLayout.NORTH);
@@ -130,6 +132,8 @@ public class EnvironmentGUI2 extends JFrame {
                             agentLabel.setForeground(AGENT_COOP1_COLOR);
                         } else if (agentName.equals("AgentCoop2")) {
                             agentLabel.setForeground(AGENT_COOP2_COLOR);
+                        } else if (agentName.equals("AgentABut")) {
+                            agentLabel.setForeground(AGENT_A_BUT_COLOR);
                         }
                         
                         cell.add(agentLabel);
